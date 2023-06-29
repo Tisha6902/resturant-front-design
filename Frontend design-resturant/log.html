@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signin</title>
+	<style>
+
+		html{
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: arial,sens-serif;
+			background: linear-gradient(#141e30, #243b55);
+		}
+		.login-box{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 400px;
+			height: 600px;
+			padding: 40px;
+			transform: translate(-50%,-50%);
+			background: rgba(0,0,0,0.9);
+			box-sizing: border-box;
+			box-shadow: 0 15px 25px rgba(0,0,0,10);
+			border-radius: 10px;
+		}
+		.avatar{
+			text-align: center;
+			margin: 0 0 20px;
+			width: 50px;
+			margin-left: 120px;
+			border-radius: 50%;
+		}
+		.login-box .user-box{
+			position: relative;	
+		}
+		.login-box .user-box input{
+			width: 100%;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #f1eee6;
+			margin-bottom: 30px;
+			border: none;
+			border-bottom: 1px solid #f1eee6;
+			outline: none;
+			background-color: transparent;
+		}
+		.login-box .user-box label{
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px 0;
+			color: #f1eee6;
+			pointer-events: none;
+			transition: .6s;
+		}
+		.login-box .user-box input:focus ~ label,
+		.login-box .user-box input:valid ~ label
+		{
+			top: -20px;
+			left: 0px;
+			color: #03e9f4;
+			font-size: 12px;
+		}
+
+         .wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+	</style>
+</head>
+<body>
+
+<div style="margin-left:80px;">
+</div>
+   <div class="login-box">
+   	   <center><img src="TISHU'S.png" width="200" height="200"></center>
+   	   <form action="#">
+   	   	<div class="user-box">
+   	   		<input type="text" name="" required="">
+   	   		<label>Username</label>	
+   	   	</div>
+   	   	<div class="user-box">
+   	   		<input type="password" name="" required="">
+   	   		<label>Password</label>	
+   	   	</div>
+   	   	<a href="#" style="color: white; text-decoration: none;">Forget password ?</a><br><br><br>
+   	   	<div class="wrap">
+      <button class="button">Sign in</button>
+      </div><br><br>
+      <p style="color: white;"> Not have an account ?  <a href="signup.html" style="color: white; text-decoration: none; ">Sign up</a></p>
+   	   </form>
+   </div>
+
+</body>
+</html>
